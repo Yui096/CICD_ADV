@@ -1,10 +1,4 @@
-
-FROM eclipse-temurin:17-jre
-
-WORKDIR /app
-
-COPY target/*.jar app.jar
-
+FROM eclipse-temurin:11-jre
 EXPOSE 8080
-
+COPY target/demo-app-1.0-SNAPSHOT.jar app.jar
 ENTRYPOINT ["java", "-jar", "app.jar"]
